@@ -5,8 +5,7 @@ from flask import Flask
 
 
 try:
-  
-connection = mysql.connector.connect(
+  connection = mysql.connector.connect(
 	host = 'localhost',
 	user ='',
 	password='',
@@ -19,7 +18,7 @@ except mysql.connector.Error as err:
   else:
     print(err)
 else:
-  	connection.close()
+  connection.close()
 app =app = Flask('app')
 
 @app.route('/')
